@@ -1,0 +1,23 @@
+<div id='show-product'>
+  <div class='show-product-name'>
+    <h3><%= @product.name%></h3>
+  </div>
+  <div class='show-product-description'>
+    <p>Description: <%= @product.description%></p>
+  </div>
+  <div class='show-product-price'>
+    <p>Price: <%= @product.price%></p>
+  </div>
+  <div class='show-product-creator'>
+    <p>Created By: <%= @product.user.email%></p>
+  </div>
+  <div class='show-product-image'>
+    <%= image_tag(@product.avatar.url, alt: 'Image', :style => 'width:200px;' ) if @product.avatar? %>
+  </div>
+  <%if @product.user == current_user%>
+  <div class='product-action-buttons'>
+    <%= link_to 'Edit Product', edit_product_path(@product)%>
+    <%= link_to 'Delete Product', product_path(@product), method: :delete, data: {confirm: 'Are you sure to delete this product?'}%>
+  </div>
+  <%end%>
+</div>
