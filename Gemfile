@@ -65,6 +65,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise', '~> 4.2'
 gem 'carrierwave', '~> 2.0'
 gem 'twilio-ruby'
-gem 'bootstrap', '~> 5.0.0.alpha1'
-gem 'jquery-rails'
 gem 'autoprefixer-rails', '~> 10.0.1.0'
+gem 'bootstrap-sass'
+gem 'jquery-rails'
